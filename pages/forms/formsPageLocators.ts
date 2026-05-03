@@ -1,0 +1,36 @@
+export const FormsLocators = {
+
+    firstNameInput: '[data-testid="input-first-name"]',
+    lastNameInput: '[data-testid="input-last-name"]',
+    emailInput: '[data-testid="input-email"]',
+    phoneInput: '[data-testid="input-phone"]',
+    dobInput: '[data-testid="input-dob"]',
+    maleGenderRadio: '[data-testid="radio-gender-male"]',
+    femaleGenderRadio: '[data-testid="radio-gender-female"]',
+    otherGenderRadio: '[data-testid="radio-gender-other"]',
+    countrySelect: '[data-testid="select-country"]',
+    countryOptionUSA: '[role="option"]:has-text("USA")',
+    cityInput: '[data-testid="input-city"]',
+    bioTextarea: '[data-testid="textarea-bio"]',
+    playwrightCheckbox: '[data-testid="checkbox-interest-playwright"]',
+    passwordInput: '[data-testid="input-password"]',
+    confirmPasswordInput: '[data-testid="input-confirm-password"]',
+    termsCheckbox: '[data-testid="checkbox-terms"]',
+    resetFormBtn: '[data-testid="reset-form-btn"]',
+    submitFormBtn: '[data-testid="submit-form-btn"]',
+    successIcon: '[data-testid="success-icon"]',
+    errors: {
+        errorTerms: '[data-testid="error-terms"]',
+        errorPassword: '[data-testid="error-password"]',
+        errorConfirmPassword: '[data-testid="error-confirm-password"]',
+        errorCity: '[data-testid="error-city"]',
+        errorCountry: '[data-testid="error-country"]',
+        errorGender: '[data-testid="error-gender"]',
+        errorDob: '[data-testid="error-dob"]',
+        errorEmail: '[data-testid="error-email"]',
+        errorPhone: '[data-testid="error-phone"]',
+        errorLastName: '[data-testid="error-last-name"]',
+        errorFirstName: '[data-testid="error-first-name"]',
+    }
+
+} as const;
