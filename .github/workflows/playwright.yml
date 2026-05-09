@@ -24,7 +24,12 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      run: |
+        if [ -n "${{ github.event.inputs.tag }}" ]; then
+          npx playwright test --grep "${{ github.event.inputs.tag }}"
+        else
+          npx playwright test
+        fi
       env:
         BANK_ADMIN_USER_PASSWORD: ${{ secrets.BANK_ADMIN_USER_PASSWORD }}
         BANK_READONLY_USER_PASSWORD: ${{ secrets.BANK_READONLY_USER_PASSWORD }}
