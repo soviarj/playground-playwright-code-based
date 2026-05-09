@@ -2,7 +2,6 @@ import { FORMS_URL } from "../helpers/helpers-general/constants";
 import { test, expect } from '../helpers/helpers-general/fixtures';
 import { formData } from '../helpers/forms/formData';
 import { FormsLocators } from "../pages/forms/formsPageLocators";
-import { AccountsLocators } from "../pages/banking/accountsPageLocators";
 import { fieldConfig, Field } from "../helpers/forms/enumsForms";
 
 test.beforeEach(async ({ page }) => {
