@@ -11,7 +11,7 @@ export const mandatoryFields = {
     initialBalance: "23000"
   },
 
-  Credit_Card: {
+  Credit: {
     accountName: "Testing Account - Credit Card",
     accountType: "Credit Card",
     initialBalance: "7500"

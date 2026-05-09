@@ -4,6 +4,12 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to run (e.g. @smoke, @regress, TC-LOGIN-01)'
+        required: false
+        default: ''
 jobs:
   test:
     timeout-minutes: 60
@@ -19,6 +25,10 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
+      env:
+        BANK_ADMIN_USER_PASSWORD: ${{ secrets.BANK_ADMIN_USER_PASSWORD }}
+        BANK_READONLY_USER_PASSWORD: ${{ secrets.BANK_READONLY_USER_PASSWORD }}
+
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:

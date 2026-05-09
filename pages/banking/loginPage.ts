@@ -1,5 +1,4 @@
 import { Locator, Page } from "@playwright/test";
-import { BANK_URL } from "../../general-helpers/constants";
 
 export class LoginPage {
     

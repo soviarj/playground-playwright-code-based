@@ -1,5 +1,5 @@
-import { expect, Locator, Page } from "@playwright/test";
-import { AccountType, mandatoryFields } from "../helpers/enums";
+import { expect, Page } from "@playwright/test";
+import { AccountType, mandatoryFields } from "../../helpers/banking/enumsBanking";
 import { AccountsLocators } from "./accountsPageLocators";
 
 export class AccountsPage {

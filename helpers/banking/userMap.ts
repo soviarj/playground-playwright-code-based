@@ -1,4 +1,4 @@
-import { ADMIN_USER, ADMIN_PWD, WRONG_USER, WRONG_PWD, VIEWER_USER, VIEWER_PWD } from "../../general-helpers/constants";
+import { ADMIN_USER, ADMIN_PWD, WRONG_USER, WRONG_PWD, VIEWER_USER, VIEWER_PWD } from "../helpers-general/constants";
 
 export const users = {
   ADMIN_USER: {
