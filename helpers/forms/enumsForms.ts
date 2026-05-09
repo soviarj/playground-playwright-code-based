@@ -1,4 +1,4 @@
-import { FormsLocators } from "../pages/formsPageLocators";
+import { FormsLocators } from "../../pages/forms/formsPageLocators";
 
 export const fieldConfig = {
     'Email': {
