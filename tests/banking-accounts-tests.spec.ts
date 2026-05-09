@@ -1,4 +1,4 @@
-import { ADMIN_PWD, ADMIN_USER, BANK_URL, VIEWER_PWD, VIEWER_USER, WRONG_PWD, WRONG_USER } from "../helpers/helpers-general/constants";
+import { ADMIN_PWD, ADMIN_USER, BANK_URL } from "../helpers/helpers-general/constants";
 import { test, expect } from '../helpers/helpers-general/fixtures';
 import { AccountsLocators } from '../pages/banking/accountsPageLocators';
 import { mandatoryFields, AccountType } from '../helpers/banking/enumsBanking';
@@ -121,7 +121,7 @@ test.describe('Accounts Page Test Scenarios @accounts @banking', () => {
         });
     });
 
-    for (const [type, data] of Object.entries(mandatoryFields) as 
+    for (const [type] of Object.entries(mandatoryFields) as 
         [AccountType, typeof mandatoryFields[AccountType]][]) 
     {
         test(`[TC-ACC-05] Filter Accounts by Type ${type} @regress @smoke`, async ({ page, dashboardPage, accountsPage, menuPage, contextData }) => {
@@ -168,5 +168,4 @@ test.describe('Accounts Page Test Scenarios @accounts @banking', () => {
             });
         });
     }
-
 });
